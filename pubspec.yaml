@@ -18,19 +18,23 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.10.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-
+  font_awesome_flutter: ^9.1.0
+  nb_utils:  3.3.0+8
+  video_player: ^2.1.12
+  flutter_slidable: ^0.6.0
+  lipsum: ^1.0.1
   splash_screen_view: 1.0.1
   image_picker: 0.6.4
   dots_indicator: ^1.2.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-
+  swipedetector: 1.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -47,9 +51,17 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/pluto-welcome.png
+    - assets/pluto-waiting.png
+    - assets/pluto-sign-up.png
+    - assets/pluto-coming-soon.png
+    - assets/pluto-fatal-error.png
+    - assets/pluto-done.png
+    - assets/pv1-1.png
+    - assets/pv2-2.png
+    - assets/pv3-2.png
+    - assets/pluto-welcome.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -44,3 +44,9 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+lib/draggable_card.dart
+lib/in.dart
+lib/OnboardingSecreen.dart
+lib/profile_card.dart
+lib/wrapp.dart
+lib/swipe_cards.dart
