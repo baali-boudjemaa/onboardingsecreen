@@ -387,7 +387,7 @@ class _MyHomePageState extends State<MyHomePage> {
         .size;
     return Scaffold(
         key: _scaffoldKey,
-
+        backgroundColor: Colors.white60,
         body:
         Stack(
           children: [
@@ -408,10 +408,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                 },
                 onStackFinished:() {
-                  _scaffoldKey.currentState.showSnackBar(SnackBar(
+                  /*_scaffoldKey.currentState.showSnackBar(SnackBar(
                     content: Text("Stack Finished"),
                     duration: Duration(milliseconds: 500),
-                  ));
+                  ));*/
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Container(
+                      color: Colors.lightBlue,
+                      child: Center(
+
+                        child: Text("Welcome"),
+                      ),
+                    )),
+                  );
                 },
               ),
             ),

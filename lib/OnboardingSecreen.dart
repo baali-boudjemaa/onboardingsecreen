@@ -128,39 +128,52 @@ class Pages extends StatelessWidget {
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
-    return Container(
+    return Card(
+      elevation: 9,
       color: Colors.white,
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      child: Column(
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.only(top: h * 0.05),
-            height: h * 0.5,
-            child: Stack(
-              alignment: Alignment.bottomCenter,
-              children: <Widget>[
-                Image.asset(walkImg, width: width * 0.8, height: h * 0.4)
-              ],
-            ),
-          ),
-          SizedBox(
-            height: h * 0.08,
-          ),
-          Text(
-            textContent,
-            style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold)),
+      shape: RoundedRectangleBorder(
+        side: BorderSide(color: Colors.white70, width: 1),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Container(
 
-          Padding(
-            padding: const EdgeInsets.only(left: 28.0, right: 28.0),
-            child: Text(
-              desc,
-              maxLines: 3,
-              textAlign: TextAlign.center,
-              style: primaryTextStyle(size: 16),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            // border: Border.all(color: Colors.black, width: 3),
+            borderRadius: BorderRadius.all(Radius.circular(18)),
+          ),
+        child: Column(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(top: h * 0.05),
+              height: h * 0.5,
+
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                children: <Widget>[
+                  Image.asset(walkImg, width: width * 0.8, height: h * 0.4)
+                ],
+              ),
             ),
-          )
-        ],
+            SizedBox(
+              height: h * 0.08,
+            ),
+            Text(
+              textContent,
+              style: TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold)),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 28.0, right: 28.0),
+              child: Text(
+                desc,
+                maxLines: 3,
+                textAlign: TextAlign.center,
+                style: primaryTextStyle(size: 16),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
